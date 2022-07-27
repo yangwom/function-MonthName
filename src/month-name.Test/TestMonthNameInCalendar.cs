@@ -10,13 +10,18 @@ public class TestMonthNameInCalendar
     [InlineData(1, "Janeiro")]
     public void TestMonthNameInCalendarSucess(int month, string expected)
     {
-        throw new NotImplementedException();
+        var data = MonthNameInCalendar.MonthName(month);
+
+        data.Should().Be(expected);
     }
 
     [Theory]
     [InlineData(0, "inválido")]
     public void TestMonthNameInCalendarOutOfRange(int month, string expected)
     {
-        throw new NotImplementedException();
+        
+        var data = MonthNameInCalendar.MonthName(month);
+
+        data.Should().Be(expected);
     }
 }
